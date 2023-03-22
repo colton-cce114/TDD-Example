@@ -40,7 +40,7 @@ def test_categorizeBMI():
     assert main.categorizeBMI(32) == 'obese'
     
 def test_categorizeBMIboundaries():
-    assert main.categorizeBMI(16) == 'underweight'
+    assert main.categorizeBMI(16) == 'underweight' #Exterior
     assert main.categorizeBMI(18.4) == 'underweight' #On
     assert main.categorizeBMI(18.5) == 'normal weight' #Off
     assert main.categorizeBMI(21) == 'normal weight' #Interior

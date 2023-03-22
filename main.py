@@ -27,10 +27,17 @@ print("Welcom to the BMI Calculator!")
 print("I made this late at night so make")
 print("SURE you're entering correct values.")
 
-while True:
+ans = "y"
+cont = True
+
+while(cont):
     weight = input("Weight(pounds): ")
     height = input("Height(inches): ")
 
     print("You're BMI is a smooth ", getBMI(weight, height), "making you ", categorizeBMI(getBMI(weight, height)))
 
-    if (input("Continue? (y/n): ") != 'y'): return False
+    ans = raw_input("Continue? (y/n): ")
+    if (ans == "y"):
+        continue
+    else:
+        cont = False
