@@ -31,12 +31,12 @@ ans = "y"
 cont = True
 
 while(cont):
-    weight = input("Weight(pounds): ")
-    height = input("Height(inches): ")
+    weight = float(input("Weight(pounds): "))
+    height = float(input("Height(inches): "))
 
     print("You're BMI is a smooth ", getBMI(weight, height), "making you ", categorizeBMI(getBMI(weight, height)))
 
-    ans = raw_input("Continue? (y/n): ")
+    ans = input("Continue? (y/n): ")
     if (ans == "y"):
         continue
     else:
