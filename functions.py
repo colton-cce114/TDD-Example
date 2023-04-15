@@ -30,14 +30,14 @@ def categorizeBMI(a):
 #ans = "y"
 #cont = True
 
-while(cont):
-    weight = float(input("Weight(pounds): "))
-    height = float(input("Height(inches): "))
+#while(cont):
+#    weight = float(input("Weight(pounds): "))
+#    height = float(input("Height(inches): "))
 
-    print("You're BMI is a smooth ", getBMI(weight, height), "making you ", categorizeBMI(getBMI(weight, height)))
+#    print("You're BMI is a smooth ", getBMI(weight, height), "making you ", categorizeBMI(getBMI(weight, height)))
 
-    ans = input("Continue? (y/n): ")
-    if (ans == "y"):
-        continue
-    else:
-        cont = False
+#    ans = input("Continue? (y/n): ")
+#    if (ans == "y"):
+#        continue
+#    else:
+#        cont = False
