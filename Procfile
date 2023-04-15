@@ -1,0 +1,1 @@
+web: gunicorn bmicalculator.bmicalculator.wsgi --log-file -
