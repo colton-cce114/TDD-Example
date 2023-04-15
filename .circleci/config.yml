@@ -25,4 +25,4 @@ workflows:
       - tests
       - deploy:
           requires:
-            - test
+            - tests
