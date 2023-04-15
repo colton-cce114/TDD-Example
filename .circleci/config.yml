@@ -14,13 +14,16 @@ jobs:
       - run: python3 test_main.py
 
   deploy: 
-    - echo "All tests passed. Deploying to Heroku."
-    - heroku/deploy-via-git
+    docker:
+      - image: "circleci/python:3.10"
+    steps:
+      - echo "All tests passed. Deploying to Heroku."
+      - heroku/deploy-via-git
 
 workflows:
-  heroku_deploy:
+  build_and_test:
     jobs:
-      - unit_test
+      - unit_tests
       - deploy:
-        requires:
-          - test
+          requires:
+            - test
