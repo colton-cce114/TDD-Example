@@ -1,7 +1,26 @@
 version: 2.1
 orbs:
   heroku: circleci/heroku@0.0.10
+  python: travelaudience/python@1.1.2
+
+jobs:
+  unit_tests:
+    working_directory: ~/circleci-python
+    docker:
+      - image: "circleci/python:3.10"
+    steps:
+      - checkout
+      - echo "Running unit function tests..."
+      - run: python3 test_main.py
+
+  deploy: 
+    - echo "All tests passed. Deploying to Heroku."
+    - heroku/deploy-via-git
+
 workflows:
   heroku_deploy:
     jobs:
-      - heroku/deploy-via-git
+      - unit_test
+      - deploy:
+        requires:
+          - test

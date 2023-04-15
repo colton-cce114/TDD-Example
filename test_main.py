@@ -51,11 +51,13 @@ def test_categorizeBMIboundaries():
     assert main.categorizeBMI(30) == 'obese' #On
     assert main.categorizeBMI(32) == 'obese' #Exterior
 
-
-
-
-
-
-
-
-    
+if __name__ == '__main__':
+    print("test_main.py: running unit tests")
+    test_multiplyFunc()
+    test_convertHeight()
+    test_squareFunc()
+    test_divideFunc()
+    test_getBMI()
+    test_categorizeBMI()
+    test_categorizeBMIboundaries()
+    print("test_main.py: all tests passed. ")
