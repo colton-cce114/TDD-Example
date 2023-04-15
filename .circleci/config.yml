@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  heroku: circleci/heroku@0.0.10
+  heroku: circleci/heroku@2.0.0
 
 jobs:
   tests:
@@ -13,10 +13,9 @@ jobs:
       - run: python3 main.py
 
   deploy: 
-    docker:
-      - image: "circleci/python:3.10"
+    executor: heroku/default
     steps:
-      - run: echo "All tests passed. Deploying to Heroku."
+      - checkout
       - heroku/deploy-via-git
 
 workflows:
