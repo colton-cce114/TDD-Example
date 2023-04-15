@@ -3,7 +3,7 @@ orbs:
   heroku: circleci/heroku@0.0.10
 
 jobs:
-  unit_tests:
+  tests:
     working_directory: ~/circleci-python
     docker:
       - image: "circleci/python:3.10"
@@ -20,9 +20,9 @@ jobs:
       - heroku/deploy-via-git
 
 workflows:
-  build_and_test:
+  tests_and_deploy:
     jobs:
-      - unit_tests
+      - tests
       - deploy:
           requires:
             - test
