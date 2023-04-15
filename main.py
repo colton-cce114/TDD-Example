@@ -23,12 +23,12 @@ def categorizeBMI(a):
     elif 25 <= a <= 29.9: return 'overweight'
     elif a >= 30: return 'obese'
 
-print("Welcom to the BMI Calculator!")
-print("I made this late at night so make")
-print("SURE you're entering correct values.")
+#print("Welcom to the BMI Calculator!")
+#print("I made this late at night so make")
+#print("SURE you're entering correct values.")
 
-ans = "y"
-cont = True
+#ans = "y"
+#cont = True
 
 while(cont):
     weight = float(input("Weight(pounds): "))

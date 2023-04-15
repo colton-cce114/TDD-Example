@@ -1,0 +1,19 @@
+{% block content %}
+<h1>Welcome to the BMI Calculator!(now online)</h1>
+
+We do a bit of calculating here
+<p>Remember, the values given by this BMi calculator may not 
+    reflect values given by other BMI calculators, but this 
+    calculator uses the formula given by my professor. 
+</p>
+
+<form action="calculate">
+    Enter your weight: <input type="text" name="weight"><br>
+    Enter your height: <input type="text" name="height"><br>
+    <input type="submit">
+</form>
+
+Your BMI: {{bmi}}
+Your BMI makes you: {{category}}
+
+{% endblock %}
