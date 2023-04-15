@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   heroku: circleci/heroku@0.0.10
-  python: travelaudience/python@1.1.2
 
 jobs:
   unit_tests:
