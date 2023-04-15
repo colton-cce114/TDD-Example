@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Running unit function tests..."
-      - run: python3 test_main.py
+      - run: python3 main.py
 
   deploy: 
     docker:
